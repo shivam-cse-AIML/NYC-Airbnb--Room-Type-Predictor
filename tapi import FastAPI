@@ -42,7 +42,7 @@ def greet():
     return "Hello"
 @app.post('/predict')
 def predict(features : Features):
-    row = pd.DataFrame([features.dict()],columns=COLUMNS)
+    row = pd.DataFrame([features.dict()],olumns=COLUMNS)
     prediction  = model.predict(row)
     probability = model.predict_proba(row)
 
